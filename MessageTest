@@ -1,0 +1,19 @@
+package me.Maria.DiscordCC;
+
+import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
+import net.dv8tion.jda.core.hooks.ListenerAdapter;
+
+public class MessageResponder extends ListenerAdapter{
+	public void onMessageReceived (MessageReceivedEvent event) {
+		String message = event.getMessage().getContent();
+		
+		if (message.startsWith("!test")) {
+			String name = event.getAuthor().getName();
+			
+			String response = name + "Accepted";
+			
+			event.getTextChannel().sendMessage(response).queue();
+      //Don't know if this is neccesary
+		}
+	}
+}
