@@ -1,0 +1,6 @@
+package me.Maria.DiscordCC;
+
+public class Connection {
+		public static final String discordToken = "TOKEN";
+
+}
